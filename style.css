@@ -1,0 +1,595 @@
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    margin-top: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* MAO */
+.circulo-mao-grande{
+    width: 7em;
+    cursor: pointer;
+    height: 7em;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, hsl(349, 71%, 52%),hsl(349, 70%, 56%));
+    position: relative;
+    box-shadow: 0px 5px 0px 0px hsl(349, 70%, 36%);
+}
+.mpi{
+    left: -3.5em;
+    top: -2em;
+}
+.circulo-mao-pequena{
+    width: 5.5em;
+    height: 5.5em;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 5px 0px 0px hsl(217, 16%, 75%) inset;
+}
+.mao{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 2.5em;
+    transform: translate(-50%,-50%);
+}
+/* TESOURA */
+.circulo-tesoura-grande{
+    width: 7em;
+    height: 7em;
+    cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+    position: relative;
+    box-shadow: 0px 5px 0px 0px hsl(39, 89%, 40%);
+}
+.tpi{
+    right: -9em;
+    top: -9em;
+}
+.circulo-tesoura-pequena{
+    width: 5.5em;
+    height: 5.5em;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 5px 0px 0px hsl(217, 16%, 75%) inset;
+}
+.tesoura{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 2.5em;
+    transform: translate(-50%,-50%);
+}
+/* PAPEL */
+.circulo-papel-grande{
+    width: 7em;
+    cursor: pointer;
+    height: 7em;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+    position: relative;
+    box-shadow: 0px 5px 0px 0px hsl(230, 89%, 57%);
+}
+.ppi{
+    bottom: 4.5em;
+    left: 2.5em;
+}
+.circulo-papel-pequena{
+    width: 5.5em;
+    height: 5.5em;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 5px 0px 0px hsl(217, 16%, 75%) inset;
+}
+.papel{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 2.5em;
+    transform: translate(-50%,-50%);
+}
+/* heaer */
+header{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid hsl(217, 16%, 45%);;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.types-contem{
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.types-contem span{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 0.8em;
+    font-size: 1.2em;
+}
+.score-contem{
+    background-color: white;
+    width: 4.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+.title-score{
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.6em;
+    font-weight: 700;
+}
+.score{
+    color: hsl(217, 16%, 45%);
+    font-size: 2em;
+    font-weight: 700;
+}
+/* ESCOLHER */
+.all-escolhas{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 13em;
+    background-image: url(./images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-width: 200px;
+}
+.contem-rules{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 4.5em;
+}
+.rules{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 0.6em 2.2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid wheat;
+    border-radius: 10px;
+}
+/* RULES */
+.rules-show{
+    background-image: none;
+}
+.rules-show main{
+    display: none;
+}
+.rules-hidden{
+    display: none;
+}
+.rules-show .rules-hidden{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+.rules-hidden span{
+    color: hsl(217, 16%, 35%);
+    font-weight: 700;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    padding-top: 1.6em;
+    padding-bottom: 2.5em;
+}
+.contem-svg-close{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    position: relative;
+    margin-bottom: 3em;
+    cursor: pointer;
+}
+.svg-close{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* INICIO SHOW */
+.inicio-show{
+    background-image: linear-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+}
+.inicio-show main{
+    display: flex;
+}
+.inicio-show .rules-hidden, .inicio-show .nomes-resultado, .inicio-show .resultado, .inicio-show .footer-jogo{
+    display: none;
+}
+/* RESULTADOS */
+.result-show main, .result-show .contem-rules{
+    display: none;
+}
+.result-show{
+    background-image: linear-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    min-height: 100vh;
+    justify-content: space-between;
+}
+.result-show header{
+    margin-bottom: 15%;
+}
+.result-show .resultado{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 0%;
+    overflow: visible;
+    justify-content: space-between;
+    height: 12em;
+    max-width: 475px;
+}
+.nomes-resultado{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2em;
+    display: flex;
+    max-width: 475px;
+    margin-bottom: 18%;
+}
+.nomes-resultado div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.nomes-resultado div span{
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+.parte1-span{
+    justify-content: left;
+    padding-left: 15%;
+}
+.parte2-span{
+    justify-content: right;
+    padding-right: 10%;
+}
+/* caso ganhe */
+.win-03{
+    height: 10em;
+    width: 10em;
+    background-color: rgba(255,255,255,0%);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .win-01 .win-02 .win-03{
+    background-color: rgba(255,255,255,7%);
+}
+.win-02{
+    height: 13em;
+    width: 13em;
+    background-color: rgba(255,255,255,0%);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .win-01 .win-02{
+    background-color: rgba(255,255,255,4%);
+}
+.win-01{
+    overflow: visible;
+    height: 16em;
+    width: 16em;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(255,255,255,0%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .win-01{
+    background-color: rgba(255,255,255,2%);
+}
+.lado-esquerdo{
+    position: relative;
+    left: 25%;
+}
+.loss-03{
+    height: 10em;
+    width: 10em;
+    background-color: rgba(255,255,255,0%);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .loss-01 .loss-02 .loss-03{
+    background-color: rgba(255,255,255,7%);
+}
+.loss-02{
+    height: 13em;
+    width: 13em;
+    background-color: rgba(255,255,255,0%);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .loss-01 .loss-02{
+    background-color: rgba(255,255,255,4%);
+}
+.loss-01{
+    height: 16em;
+    width: 16em;
+    background-color: rgba(255,255,255,0%);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: visible;
+}
+.toggle .loss-01{
+    background-color: rgba(255,255,255,2%);
+}
+.lado-direito{
+    position: relative;
+    right: 25%;
+}
+.minhaEscolha{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.footer-jogo{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25%;
+}
+.padraoInicial{
+    background-color: hsl(217, 16%, 45%);
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+}
+.contagem{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: 700;
+    font-size: 4em;
+}
+.contagem-anima{
+    animation: contagem 1s normal;
+    animation-iteration-count: 3;
+}
+.title-resultado{
+    color: white;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 15px;
+    max-width: 300px;
+}
+.play-again{
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: white;
+    padding: 1em 3.5em;
+    max-width: 300px;
+    font-size: 1em;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.disable{
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+@keyframes contagem {
+    0%{
+        font-size: 4em;
+    }
+    100%{
+        font-size: 2em;
+    }
+}
+@media (min-width: 1000px){
+    header{
+        width: 55%;
+        margin-top: 1.5em;
+    }
+    .types-contem span{
+        font-size: 2em;
+    }
+    .score-contem{
+        width: 6em;
+    }
+    .score{
+        font-size: 3em;
+    }
+    main{
+        width: 100%;
+    }
+    .atlms{
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .all-escolhas{
+        width: 70%;
+        height: 17em;
+        max-width: none;
+        position: relative;
+        max-width: 430px;
+    }
+    .circulo-mao-grande, .circulo-papel-grande, .circulo-tesoura-grande{
+        width: 11em;
+        height: 11em;
+    }
+    .circulo-mao-pequena, .circulo-papel-pequena, .circulo-tesoura-pequena{
+        width: 8em;
+        height: 8em;
+    }
+    .mao, .tesoura, .papel{
+        width: 3.5em;
+    }
+    .mpi{
+        top: -3em;
+        left: -3em;
+    }
+    .tpi{
+        right: -18em;
+        top: -14em;
+    }
+    .ppi{
+        left: 7.5em;
+        bottom: 12em;
+    }
+    .title-score{
+        font-size: 1em;
+        padding-top: 4px;
+    }
+    .result-show header{
+        margin-bottom: 10vh;
+    }
+    .rules-svg img{
+        width: 450px;
+    }
+    .rules-hidden span{
+        padding-top: 0.7em;
+    }
+    .result-show .oli{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+    .result-show{
+        justify-content: start;
+    }
+    .result-show .nomes-resultado{
+        margin-bottom: 0% !important;
+        height: auto;
+    }
+    .result-show .footer-jogo{
+        margin-bottom: 0px;
+        height: 1em;
+    }
+    .contem-rules{
+        display: flex;
+        justify-content: center;
+        text-align: bottom;
+        align-items: flex-end;
+        position: relative;
+    }
+    .rules{
+        position: absolute;
+        top: -10px;
+    }
+    .loss-03, .win-03{
+        height: 15em;
+        width: 15em;
+        background-color: rgba(255,255,255,0%);
+        border-radius: 50%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .toggle .loss-01 .loss-02 .loss-03, .toggle .win-01 .win-02 .win-03{
+        background-color: rgba(255,255,255,7%);
+    }
+    .loss-02, .win-02{
+        height: 19em;
+        width: 19em;
+        background-color: rgba(255,255,255,0%);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .toggle .loss-01 .loss-02, .toggle .win-01 .win-02{
+        background-color: rgba(255,255,255,4%);
+    }
+    .loss-01, .win-01{
+        height: 23em;
+        width: 23em;
+        background-color: rgba(255,255,255,0%);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        overflow: visible;
+    }
+    .toggle .loss-01, .toggle .win-01{
+        background-color: rgba(255,255,255,2%);
+    }
+}

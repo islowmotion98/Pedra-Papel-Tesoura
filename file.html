@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body id="body" class="inicio-show ">
+    <div id="showRules" class="rules-hidden">
+        <span>rules</span>
+        <div class="rules-svg">
+            <img src="./images/image-rules.svg" alt="">
+        </div>
+        <div class="contem-svg-close" onclick="closeRules()">
+            <img class="svg-close" src="./images/icon-close.svg" alt="">
+        </div>
+    </div>
+    <header>
+        <div class="types-contem">
+            <span>rock</span>
+            <span>paper</span>
+            <span>scissors</span>
+        </div>
+        <div class="score-contem">
+                <span class="title-score">score</span>
+                <span class="score" id="score">0</span>
+        </div>
+    </header>
+    <div class="oli">
+        <div class="resultado">
+            <div class="lado-esquerdo" id="minhaEscolh">
+                <div class="win-01">
+                    <div class="win-02">
+                        <div class="win-03">
+                            <div class="minhaEscolha" id="segundo-jogador">
+                                <div class="" id="primeiro-jogador">
+                                        <img id="imagem" class="mao" src="./images/icon-rock.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lado-direito" id="cpuEscolha">
+                <div class="loss-01">
+                    <div class="loss-02">
+                        <div class="loss-03">
+                            <div class="minhaEscolha padraoInicial" id="segundo-cpu">
+                                <span class="contagem" id="contagem"></span>
+                                <div class="" id="primeiro-cpu">
+                                        <img class="mao" src="" id="imagem-cpu" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nomes-resultado">
+            <div class="parte1-span">
+                <span>you picked</span>
+            </div>
+            <div class="parte2-span">
+                <span>the house picked</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-jogo disable" id="resul">
+        <div>
+            <span class="title-resultado" id="title-res">You Lose</span>
+        </div>
+        <div onclick="closeRules()">
+            <span class="play-again">play again</span>
+        </div>
+    </div>
+    <main>
+        <section class="atlms">
+            <div class="all-escolhas">
+                <div class="circulo-mao-grande mpi" onclick="escolherJagada(0)">
+                    <div class="circulo-mao-pequena">
+                            <img class="mao" src="./images/icon-rock.svg" alt="">
+                    </div>
+                </div>
+                <div class="circulo-tesoura-grande tpi" onclick="escolherJagada(1)">
+                    <div class="circulo-tesoura-pequena">
+                            <img class="tesoura" src="./images/icon-scissors.svg" alt="">
+                    </div>
+                </div>
+                <div class="circulo-papel-grande ppi" onclick="escolherJagada(2)">
+                    <div class="circulo-papel-pequena">
+                            <img class="papel" src="./images/icon-paper.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="contem-rules" onclick="showRules()">
+        <span class="rules">rules</span>
+    </div>
+    <script src="./js.js"></script>
+</body>
+</html>
